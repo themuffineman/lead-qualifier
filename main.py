@@ -13,13 +13,9 @@ client = OpenAI()
 class LeadQuality(BaseModel):
     qualified: Literal["strong", "weak", "unqualified"]
     reason: str
-    
-
-
 token = os.getenv("APIFY_TOKEN")
 posts = []
 apify_client = ApifyClient(token)
-
 linkedin_profiles = ["https://www.linkedin.com/in/petrus-sheya/"]
 post_limit = 2
 lead_website="https://docs.apify.com/academy/web-scraping-for-beginners"
